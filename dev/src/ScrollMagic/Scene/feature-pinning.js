@@ -325,8 +325,8 @@ this.setPin = function (element, settings) {
 	window.addEventListener('resize', updatePinInContainer, { passive: true });
 	window.addEventListener('resize', updateRelativePinSpacer, { passive: true });
 	// add mousewheel listener to catch scrolls over fixed elements
-	_pin.addEventListener("mousewheel", onMousewheelOverPin);
-	_pin.addEventListener("DOMMouseScroll", onMousewheelOverPin);
+	_pin.addEventListener("mousewheel", onMousewheelOverPin, { passive: true });
+	_pin.addEventListener("DOMMouseScroll", onMousewheelOverPin, { passive: true });
 
 	log(3, "added pin");
 
